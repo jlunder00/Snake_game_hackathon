@@ -2,6 +2,7 @@ import pygame
 from world import World
 from player import Player
 from direction import Direction
+import sys
 
 def main():
     pygame.init()
@@ -9,7 +10,7 @@ def main():
     clock = pygame.time.Clock()
     world = World(8, 8)
     while world.game_over != True:
-        clock.tick(1)
+        clock.tick(int(sys.argv[1]))
         player = world.getPlayer()
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
