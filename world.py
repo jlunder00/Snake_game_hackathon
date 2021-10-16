@@ -20,6 +20,9 @@ class World():
         self.cur_candy = self.spawn_candy(self.player.getBody())
         self.game_over = False
 
+    def getPlayer(self):
+        return player
+
     def spawn_candy(self, playerBody):
         location = (random.randint(0, self.width), random.randint(0, self.height))
         while location in [segment.getLocation() for segment in playerBody]:
