@@ -31,7 +31,7 @@ class World():
         return Candy(location)
 
     def update(self):
-        self.player.update(self, self.width)
+        self.player.update(self.width)
         if not self.player.collided():
             for segment in self.player.getBody():
                 prevLocation = segment.getPrevLocation()
