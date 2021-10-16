@@ -56,7 +56,11 @@ class Player():
     #returns head's previous location
     def getPrevLocation(self):
         return self.head.getPrevLocation()
-        
-    #creturns head location
+
+    #returns head location
     def getLocation(self):
         return self.head.getLocation()
+
+    #reutrns head direction
+    def getDirection(self):
+        return self.head.getDirection()
