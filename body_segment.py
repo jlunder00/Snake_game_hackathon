@@ -7,15 +7,15 @@ class BodySegment():
         self.prevLocation = location
     def update(self, rowWidth):
         self.direction = self.nextDirection
-        self.prevLocation = location`
+        self.prevLocation = self.location
         if self.direction == Direction.UP:
-            self.location[1] -= rowWidth
+            self.location[1] = (self.location[0], self.location[1]-rowWidth)
         elif self.direction == Direction.DOWN:
-            self.location[1] += rowWidth
+            self.location[1] = = (self.location[0], self.location[1]+rowWidth)
         elif self.direction == Direction.RIGHT:
-            self.location[0] += 1
+            self.location = (self.location[0]+1, self.location[1])
         elif self.direction == Direction.LEFT:
-            self.location[0] -= 1
+            self.location[0] = (self.location[0]-1, self.location[1])
     def getLocation(self):
         return self.location
 
