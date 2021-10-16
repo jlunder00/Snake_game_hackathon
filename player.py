@@ -1,11 +1,12 @@
 from direction import Direction
+from bodysegment import BodySegment
 
 
 class Player():
     # initilizes head and body
     def __init__(self, direction, head):
         self.head = BodySegment(direction, head)
-        self.body = [head]
+        self.body = [self.head]
 
 
     # function that turns head's direction to left 
