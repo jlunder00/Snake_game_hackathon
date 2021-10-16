@@ -11,7 +11,7 @@ class BodySegment():
         if self.direction == Direction.UP:
             self.location[1] = (self.location[0], self.location[1]-1)
         elif self.direction == Direction.DOWN:
-            self.location[1] = = (self.location[0], self.location[1]+1)
+            self.location[1] = (self.location[0], self.location[1]+1)
         elif self.direction == Direction.RIGHT:
             self.location = (self.location[0]+1, self.location[1])
         elif self.direction == Direction.LEFT:
