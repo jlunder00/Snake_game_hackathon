@@ -1,5 +1,5 @@
 from direction import Direction
-from bodysegment import BodySegment
+from body_segment import BodySegment
 
 
 class Player():
