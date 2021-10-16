@@ -34,3 +34,6 @@ def main():
                     elif d == Direction.RIGHT:
                         player.turnRight()
         world.update()
+
+if __name__ == "__main__":
+    main()
