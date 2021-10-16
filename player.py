@@ -11,12 +11,10 @@ class Player():
 
     # function that turns head's direction to left 
     def turnLeft(self):
-        if self.head.getDirection() is not Direction.RIGHT:
             self.head.setNextDirection(Direction(self.head.getDirection().value -1))
     
     # function that turns head's direction to left
     def turnRight(self):
-        if self.head.getDirection() is not Direction.LEFT:
             self.head.setNextDirection(Direction(self.head.getDirection().value +1))
     # gets body
     def getBody(self):
@@ -52,7 +50,7 @@ class Player():
 
     #checks to see if snake collides with wall
     def wallCollision(self):
-        return self.getHeadLocation() > 7 or self.getHeadLocation() < 0
+        return self.getHeadLocation()[0] > 7 or self.getHeadLocation()[0] < 0 or self.getHeadLocation()[1] > 7 or self.getHeadLocation()[1] < 0
 
     #returns head's previous location
     def getPrevLocation(self):
