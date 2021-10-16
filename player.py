@@ -11,11 +11,11 @@ class Player():
 
     # function that turns head's direction to left 
     def turnLeft(self):
-            self.head.setNextDirection(Direction(self.head.getDirection().value -1))
+            self.head.setNextDirection(Direction((self.head.getDirection().value -1)%4))
     
     # function that turns head's direction to left
     def turnRight(self):
-            self.head.setNextDirection(Direction(self.head.getDirection().value +1))
+            self.head.setNextDirection(Direction((self.head.getDirection().value +1)%4))
     # gets body
     def getBody(self):
         return self.body
