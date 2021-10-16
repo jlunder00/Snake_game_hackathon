@@ -12,7 +12,7 @@ class World():
         self.width = width
         self.height = height
         self.numLEDs = width*height
-        self.pixels = [(0,0,0)]*numLEDs
+        self.pixels = [(0,0,0)]*self.numLEDs
         self.board = [[0 for j in range(self.width)] for i in range(self.height)]
         head = (random.randint(0, self.width), random.randint(0, self.height))
         direction = random.choice(list(Direction))
